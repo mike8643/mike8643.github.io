@@ -107,7 +107,7 @@ function start() {
                     document.querySelector("#nim_locked_supply").innerHTML = (nim * 12500).toLocaleString();
                     document.querySelector("#str_locked_supply").innerHTML = (str * 40000).toLocaleString();
 
-                    calcAPR();
+                    calcTitanAPR();
 
                     if (isRefreshTriggered === true) {
 
@@ -148,7 +148,7 @@ function start() {
                             initStratus(curRadio);
                         }
 
-                        ProfitCalc();
+                        titanProfitCalc();
 
                     } else {
 
@@ -171,7 +171,7 @@ function start() {
 
 
 /*********************************************
-Function to get number of  nodes
+Function to get number of Titan nodes
 *********************************************/
 
 async function getTitanNodes(urlTitanNodes) {
