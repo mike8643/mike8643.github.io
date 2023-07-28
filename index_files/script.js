@@ -70,7 +70,7 @@ function start() {
             getCurrencies(urlCurrencies);
             rankRadio();
 
-            var urlTitanNodes = "https://titan.runonflux.io/nodes";
+            var urlTitanNodes = "https://api.titan.runonflux.io/nodes";
             getTitanNodes(urlTitanNodes);
 
             async function getCurrencies(urlCurrencies) {
@@ -107,7 +107,7 @@ function start() {
                     document.querySelector("#nim_locked_supply").innerHTML = (nim * 12500).toLocaleString();
                     document.querySelector("#str_locked_supply").innerHTML = (str * 40000).toLocaleString();
 
-                    calcTitanAPR();
+                    calcAPR();
 
                     if (isRefreshTriggered === true) {
 
@@ -148,7 +148,7 @@ function start() {
                             initStratus(curRadio);
                         }
 
-                        titanProfitCalc();
+                        ProfitCalc();
 
                     } else {
 
@@ -171,7 +171,7 @@ function start() {
 
 
 /*********************************************
-Function to get number of Titan nodes
+Function to get number of  nodes
 *********************************************/
 
 async function getTitanNodes(urlTitanNodes) {
@@ -191,7 +191,7 @@ async function getTitanNodes(urlTitanNodes) {
         }
     }
 
-    var urlTitanStats = "https://titan.runonflux.io/stats";
+    var urlTitanStats = "https://api.titan.runonflux.io/stats";
     getTitanStats(urlTitanStats);
 }
 
