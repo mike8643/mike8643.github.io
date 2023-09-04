@@ -243,7 +243,7 @@ function apr(tier, nbNodes) {
 
     aprFluxMonth = ((43200 / (nbNodes * 2)) * fluxReward[tier]);
 
-    aprCalc = Number((((aprFluxMonth + aprFluxMonth / 2) * cur) * 12) / (fluxCollateral[tier] * cur) * 100).toFixed(2);
+    aprCalc = Number((((aprFluxMonth + aprFluxMonth / paValue) * cur) * 12) / (fluxCollateral[tier] * cur) * 100).toFixed(2);
     document.getElementById(`${tier}_apr`).innerHTML = `${aprCalc}%`;
 }
 
