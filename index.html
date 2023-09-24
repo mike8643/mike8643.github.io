@@ -1,478 +1,54 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>Flux Nodes Info by VladCM81</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="index_files/main.css">
-        <link rel="icon" type="image/x-icon" href="https://fluxinfo.app.runonflux.io/assets/css/images/favicon.ico">
-	</head>
+<html lang="en" >
 
-	<body class="" onload="start()">
+<head>
+  <meta charset="UTF-8">
 
-		<noscript>To use this site, please enable JavaScript.</noscript>
+  <title>Redirect to NodeInfo</title>
+  
+<style>
+/* Webfont */
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 
-		<!------------------------------------------------
-		Navigation top menu
-		------------------------------------------------->
+body {
+  background-color: #f6f6f6;
+  font-size: 24px;
+  font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
+}
 
-		<nav id="nav">
-			<ul class="container">
-				<li><a href="#nodes">Top</a></li>
-				<li><a href="#nodes">Flux Nodes Info</a></li>
-				<li><a href="#rank">Check Your Rank</a></li>
-				<li><a href="#about">About FluxInfo</a></li>
-				<li><a href="#contact">Contact Me</a></li>
-			</ul>
-		</nav> 
+p {
+  text-align: center;
+  margin: 2em;
+  color: #2b2b2b;
+}
+</style>
 
-		<!------------------------------------------------
-		FLUX nodes general information
-		------------------------------------------------->
+  <script>
+  window.console = window.console || function(t) {};
+</script>
 
-		<article id="nodes" class="wrapper style4">
-			<div class="container">
-				<header>
-					<!-- Temporary section for announcement 
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<b style="color:#ec643f; font-weight:700;"></b>
-						</section>
-					</div><br> -->			
-					<h2>Flux Nodes Info</h2>
-					<p>Current total number of active Flux Nodes: <b style="color:#43B3E0; font-weight:700;"><span id="total">14286</span></b></p>
-					<pareward>Total FLUX locked supply: <span id="total_locked_supply">123,504,500</span><br>
-					Current FLUX price: <b style="color:#43B3E0;"><span id="usd">$0.60</span></b> | <b style="color:#43B3E0;"><span id="eur">0,55&nbsp;€</span></b> | <b style="color:#43B3E0;"><span id="gbp">£0.49</span></b> | <b style="color:#43B3E0;"><span id="chf">0.55&nbsp;CHF</span></b></pareward>
-				</header>
-				
-				<div style="margin: 0 0 1.5em 0;">
-					Show prices in:
-					<form>
-						<input type="radio" id="id_usd" name="currencyChoice" class="currencyChoice id_usd" onchange="currency(this);" value="USD" checked="checked">
-						<label for="id_usd">USD</label>
-						<input type="radio" id="id_eur" name="currencyChoice" class="currencyChoice id_eur" onchange="currency(this);" value="EUR">
-						<label for="id_eur">EUR</label>
-						<input type="radio" id="id_gbp" name="currencyChoice" class="currencyChoice id_gbp" onchange="currency(this);" value="GBP">
-						<label for="id_gbp">GBP</label>
-						<input type="radio" id="id_chf" name="currencyChoice" class="currencyChoice id_chf" onchange="currency(this);" value="CHF">
-						<label for="id_chf">CHF</label>
-					</form>
-				</div>
+  
+  
+</head>
 
-				<div class="row aln-center">
+<body translate="no">
+  <p>You will be redirected to NodeInfo.app.runonflux.io in <time><strong id="seconds">5</strong> seconds</time>.</p>
+  
+      <script id="rendered-js" >
+var el = document.getElementById('seconds'),
+total = el.innerHTML,
+timeinterval = setInterval(function () {
+  total = --total;
+  el.textContent = total;
+  if (total <= 0) {
+    clearInterval(timeinterval);
+    window.location = 'http://nodeinfo.app.runonflux.io';
+  }
+}, 1000);
+//# sourceURL=pen.js
+    </script>
 
-					<!------------------------------------------------
-					FLUX CUMULUS tier nodes information section
-					------------------------------------------------->
+  
+</body>
 
-					<div class="col-3 col-6-medium col-12-small">
-						<section class="box style1">
-							<h3>CUMULUS</h3>
-							<node><span id="cum">9887</span></node>
-							<p><pareward>APR: <b style="color:#43B3E0;"><span id="cum_apr">11.06%</span></b> (incl. PA)<br>
-							FLUX locked supply: <span id="cum_locked_supply">9,887,000</span><br>
-							Required collateral: <b>1,000 FLUX</b><br>
-							Block reward: <b>2.8125 FLUX</b> (7.5%)</pareward></p>
-
-							<p>Time between payouts:<br><b><span id="cum_payout_delay">13 days, 17 hrs and 34 min</span></b><br>
-								<pareward><span id="cum_rew"><b>~2.2</b></span> payouts per month</pareward>
-							</p>
-							
-							<p>Rewards for <b><span id="cum_node_section">1</span></b> node:<br>
-								<span id="cum_flux_day"><b>0.20 FLUX</b>/day <pareward>($0.12)</pareward><br>
-    <pareward>+ <b>0.14 FLUX Tokens/PA</b> ($0.09)</pareward></span>
-								<br><br>
-								<span id="cum_flux_month"><b>6.14 FLUX</b>/month <pareward>($3.69)</pareward><br>
-    <pareward>+ <b>4.30 FLUX Tokens/PA</b> ($2.58)</pareward></span>
-							</p>
-
-							<!------------------------------------------------
-							FLUX CUMULUS inputs for VPS cost and nodes
-							------------------------------------------------->
-
-							<div>
-								<table>
-									<tbody><tr>
-										<td colspan="2">
-										<pareward>Use the inputs below to simulate your monthly profit (hosting cost = VPS or power monthly cost).</pareward><br><br>
-										</td>
-									</tr>
-									<tr>
-										<td style="width:50%">
-											<div>
-												<p><span id="cum_vps">Hosting cost:</span><br>
-												<input type="text" class="textBox" style="text-align:center;" id="cum_vps_input" maxlength="4" size="6"></p>
-											</div>
-										</td>
-										<td style="width:50%">
-											<div class="slidecontainer">
-												<p>Nb of nodes: <b style="color:#43B3E0;"><span id="cum_nodes">0</span></b><br>
-												<input type="text" class="textBox" id="cum_nodes_slider" maxlength="4" size="6"></p>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2">Monthly reward: <b><span id="cum_reward">0.00 FLUX</span></b><br>
-											Monthly profit: <b style="color:#43B3E0;"><span id="cum_profit">$0.00</span></b><br>
-											<pareward>Req. FLUX collateral: <b style="color:#43B3E0;"><span id="cum_collateral">0</span></b><span id="cum_collateral_cur"></span></pareward>
-										</td>
-									</tr>
-								</tbody></table>
-							</div>
-						</section>
-					</div>
-
-					<!------------------------------------------------
-					FLUX NIMBUS tier nodes information section
-					------------------------------------------------->
-
-					<div class="col-3 col-6-medium col-12-small">
-						<section class="box style1">
-							<h3>NIMBUS</h3>
-							<node><span id="nim">2267</span></node>
-							<p><pareward>APR: <b style="color:#43B3E0;"><span id="nim_apr">6.43%</span></b> (incl. PA)<br>
-							FLUX locked supply: <span id="nim_locked_supply">28,337,500</span><br>
-							Required collateral: <b>12,500 FLUX</b><br>
-							Block reward: <b>4.6875 FLUX</b> (12.5%)</pareward></p>
-
-							<p>Time between payouts:<br><b><span id="nim_payout_delay">3 days, 3 hrs and 34 min</span></b><br>
-								<pareward><span id="nim_rew"><b>~9.5</b></span> payouts per month</pareward>
-							</p>
-
-							<p>Rewards for <b><span id="nim_node_section">1</span></b> node:<br>
-								<span id="nim_flux_day"><b>1.49 FLUX</b>/day <pareward>($0.89)</pareward><br>
-    <pareward>+ <b>1.04 FLUX Tokens/PA</b> ($0.63)</pareward></span>
-								<br><br>
-								<span id="nim_flux_month"><b>44.66 FLUX</b>/month <pareward>($26.83)</pareward><br>
-    <pareward>+ <b>31.26 FLUX Tokens/PA</b> ($18.78)</pareward></span>
-							</p>
-
-							<!------------------------------------------------
-							FLUX NIMBUS inputs for VPS cost and nodes
-							------------------------------------------------->
-
-							<div>
-								<table>
-									<tbody><tr>
-										<td colspan="2">
-										<pareward>Use the inputs below to simulate your monthly profit (hosting cost = VPS or power monthly cost).</pareward><br><br>
-										</td>
-									</tr>
-									<tr>
-										<td style="width:50%">
-											<div>
-												<p><span id="nim_vps">Hosting cost:</span><br>
-												<input type="text" class="textBox" style="text-align:center;" id="nim_vps_input" maxlength="4" size="6"></p>
-											</div>
-										</td>
-										<td style="width:50%">
-											<div class="slidecontainer">
-												<p>Nb of nodes: <b style="color:#43B3E0;"><span id="nim_nodes">0</span></b><br>
-												<input type=type="text" class="textBox" id="nim_nodes_slider" maxlength="4" size="6"></p>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2">Monthly reward: <b><span id="nim_reward">0.00 FLUX</span></b><br>
-											Monthly profit: <b style="color:#43B3E0;"><span id="nim_profit">$0.00</span></b><br>
-										<pareward>Req. FLUX collateral: <b style="color:#43B3E0;"><span id="nim_collateral">0</span></b><span id="nim_collateral_cur"></span></pareward>
-										</td>
-									</tr>
-								</tbody></table>
-							</div>
-						</section>
-					</div>
-
-					<!------------------------------------------------
-					FLUX STRATUS tier nodes information section
-					------------------------------------------------->
-
-					<div class="col-3 col-6-medium col-12-small">
-						<section class="box style1">
-							<h3>STRATUS</h3>
-							<node><span id="str">2132</span></node>
-							<p><pareward>APR: <b style="color:#43B3E0;"><span id="str_apr">5.13%</span></b> (incl. PA)<br>
-							FLUX locked supply: <span id="str_locked_supply">85,280,000</span><br>
-							Required collateral: <b>40,000 FLUX</b><br>
-							Block reward: <b>11.25 FLUX</b> (30.0%)</pareward></p>
-
-							<p>Time between payouts:<br><b><span id="str_payout_delay">2 days, 23 hrs and 4 min</span></b><br>
-								<pareward><span id="str_rew"><b>~10.1</b></span> payouts per month</pareward>
-							</p>
-							
-							<p>Rewards for <b><span id="str_node_section">1</span></b> node:<br>
-								<span id="str_flux_day"><b>3.80 FLUX</b>/day <pareward>($2.28)</pareward><br>
-    <pareward>+ <b>2.66 FLUX Tokens/PA</b> ($1.60)</pareward></span>
-								<br><br>
-								<span id="str_flux_month"><b>113.98 FLUX</b>/month <pareward>($68.47)</pareward><br>
-    <pareward>+ <b>79.78 FLUX Tokens/PA</b> ($47.93)</pareward></span>
-							</p>
-
-							<!------------------------------------------------
-							FLUX STRATUS inputs for VPS cost and nodes
-							------------------------------------------------->
-
-							<div>
-								<table>
-									<tbody><tr>
-										<td colspan="2">
-										<pareward>Use the inputs below to simulate your monthly profit (hosting cost = VPS or power monthly cost).</pareward><br><br>
-										</td>
-									</tr>
-									<tr>
-										<td style="width:50%">
-											<div>
-												<p><span id="str_vps">Hosting cost:</span><br>
-												<input type="text" class="textBox" style="text-align:center;" id="str_vps_input" maxlength="4" size="6"></p>
-											</div>
-										</td>
-										<td style="width:50%">
-											<div class="slidecontainer">
-												<p>Nb of nodes: <b style="color:#43B3E0;"><span id="str_nodes">0</span></b><br>
-												<input type=type="text" class="textBox" id="str_nodes_slider" maxlength="4" size="6"></p>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2">Monthly reward: <b><span id="str_reward">0.00 FLUX</span></b><br>
-											Monthly profit: <b style="color:#43B3E0;"><span id="str_profit">$0.00</span></b><br>
-										<pareward>Req. FLUX collateral: <b style="color:#43B3E0;"><span id="str_collateral">0</span></b><span id="str_collateral_cur"></span></pareward>
-										</td>
-									</tr>
-								</tbody></table>
-							</div>
-						</section>
-					</div>
-
-					<!------------------------------------------------
-					FLUX TITAN staking information section
-					------------------------------------------------->
-
-					<div class="col-3 col-6-medium col-12-small">
-						<section class="box style1">
-							<h3>TITAN</h3>
-							<node><span id="titan" style="color:#88D18A;">115</span></node>
-							<p><pareward>FLUX locked up on Titan: <b><span id="titan_locked_up">4,600,000</span></b><br>
-								FLUX staked on Titan: <b><span id="titan_staking_total">4,325,001</span></b><br>
-								</pareward></p><table>
-									<tbody><tr>
-										<td colspan="3"><pareward>Last 3 Titan nodes:</pareward></td>
-									</tr>
-									<tr>
-										<td><pareward><b>Name</b></pareward></td>
-										<td><pareward><b>Location</b></pareward></td>
-										<td><pareward><b>Created on</b></pareward></td>
-									</tr>
-									<tr>
-										<td><pareward><span id="titan_last0_name">Nimbus 08</span></pareward></td>
-										<td><pareward><span id="titan_last0_location">Paris</span></pareward></td>
-										<td><pareward><span id="titan_last0_created">3/17/2023</span></pareward></td>
-									</tr>
-									<tr>
-										<td><pareward><span id="titan_last1_name">Nimbus 09</span></pareward></td>
-										<td><pareward><span id="titan_last1_location">Lille</span></pareward></td>
-										<td><pareward><span id="titan_last1_created">3/17/2023</span></pareward></td>
-									</tr>
-									<tr>
-										<td><pareward><span id="titan_last2_name">Nimbus 10</span></pareward></td>
-										<td><pareward><span id="titan_last2_location">Roubaix</span></pareward></td>
-										<td><pareward><span id="titan_last2_created">3/17/2023</span></pareward></td>
-									</tr>
-								</tbody></table>
-								<br>APR per lockup period:<br>
-								3 months: <b><span id="titan_apr_3m">2.77%</span></b><br>
-								6 months: <b><span id="titan_apr_6m">2.95%</span></b><br>
-								12 months: <b><span id="titan_apr_12m">3.12%</span></b><p></p><br>
-
-							<!------------------------------------------------
-							FLUX TITAN staking simulator
-							------------------------------------------------->
-
-							<div>
-								<table>
-									<tbody><tr>
-										<td colspan="2">
-										<pareward>Use the inputs below to simulate your staking profit based on FLUX locked and staking period.</pareward><br><br>
-										</td>
-									</tr>
-									<tr>
-										<td style="width:50%">
-											<div>
-												<p><span id="locked_flux">FLUX locked:</span><br>
-												<input type="text" class="textBox" style="text-align:center;" id="titan_locked_flux" maxlength="6" size="8"></p>
-											</div>
-										</td>
-										<td style="width:50%">
-											Staking period:
-											<form>
-												<input type="radio" id="id_3m" name="lockupChoice" class="currencyChoice lockupChoice" onchange="titanProfitCalc(this);" value="3" checked="checked">
-												<label for="id_3m">3</label>
-												<input type="radio" id="id_6m" name="lockupChoice" class="currencyChoice lockupChoice" onchange="titanProfitCalc(this);" value="6">
-												<label for="id_6m">6</label>
-												<input type="radio" id="id_12m" name="lockupChoice" class="currencyChoice lockupChoice" onchange="titanProfitCalc(this);" value="12">
-												<label for="id_12m">12</label>
-											</form>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2">
-											Monthly reward: <b><span id="titan_reward">0.00 FLUX</span></b><br>
-											Monthly profit: <b style="color:#88D18A;"><span id="titan_profit">$0.00</span></b><br>
-											<pareward>FLUX locked: <b style="color:#43B3E0;"><span id="flux_locked">0</span></b><span id="flux_locked_cur"></span></pareward>
-										</td>
-									</tr>
-								</tbody></table>
-							</div>
-						</section>
-					</div>
-
-					<!------------------------------------------------
-					Grand total section (VPS cost, profit...)
-					------------------------------------------------->
-
-					<div class="col-12 col-6-medium col-12-small">
-						<section class="box style1">
-							<table>
-								<tbody><tr>
-									<td style="width:30%"><span id="flux_price">FLUX price (USD):</span><br>
-										<b><span style="color:#43B3E0;" id="flux_price_cur">$0.60</span></b>
-									</td>
-									<td style="width:40%">Total monthly profit:<br>
-										<b><span style="color:#43B3E0;" id="grand_profit">$0.00</span></b>
-										<br><br>
-									</td>
-									<td style="width:30%">Total required collateral:<br>
-										<b><span style="color:#43B3E0;" id="required_collateral">0</span></b><span id="required_collateral_cur"></span>
-										<br><br>
-									</td>
-								</tr>
-								
-									<tr><td style="width:30%"><span id="custom_price"><b>Custom</b> FLUX price (USD):</span><br>
-										<input type="text" class="textBox" style="text-align:center;" id="custom_price_input" maxlength="8" size="8">
-									</td>								
-									<td style="width:40%">Total FLUX/month:<br>
-										<b><span style="color:#43B3E0;" id="flux_month_total">0.00</span></b>
-									</td>	
-									<td style="width:30%">Total monthly VPS cost:<br>
-										<b><span style="color:#43B3E0;" id="total_vps_cost">$0.00</span></b>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="3">
-										<br><button type="button" onclick="reset()">Reset</button>  <button type="button" onclick="refresh()">Refresh</button>
-									</td>
-								</tr>
-							</tbody></table>
-						</section>
-					</div>								
-				</div>
-				<footer>
-					<p><pareward>Data collected from Flux APIs and CoinGecko free API (Flux prices in USD, EUR, GBP and CHF).<br>
-						9 PAs are included in the calculations out of the 10 Parallel Assets planned.<br>
-					If you appreciate my work, please consider donating some FLUX to support me. See <a href="#about">About FluxInfo</a> section for more info.</pareward></p>
-				</footer>
-			</div>
-		</article>
-
-		<!------------------------------------------------
-		Flux node rank information
-		------------------------------------------------->
-
-		<article id="rank" class="wrapper style4">
-			<div class="container medium">
-				<h2>Flux Node Rank</h2>
-				<p>Use this form to know your current rank and how soon you will receive your next reward.<br><br>
-				Show node rank information with node IP or payment wallet address:</p>
-				<div style="margin: 1em 0 1.5em 0;">
-					<form>
-						<input type="radio" id="id_ip" name="rankChoice" class="currencyChoice id_ip" onchange="rankRadio(this);" value="IP" checked="checked">
-						<label for="id_ip">IP address</label>
-						<input type="radio" id="id_wallet" name="rankChoice" class="currencyChoice id_wallet" onchange="rankRadio(this);" value="WALLET">
-						<label for="id_wallet">Wallet address</label>
-					</form>
-				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<section class="box style1">					
-						<p><span id="rank_instruction">Enter your Flux node IP address below.<br>If multiple nodes running on the same IP, please enter only the IP address and not the port number.<br>It will list all the Flux nodes attached to this IP address with rank and next reward information.</span></p>
-						<div class="row">
-							<div class="col-12">
-								<input type="text" class="textBox" style="text-align:center;" id="node_rank_input" maxlength="99" size="22" placeholder="xx.xx.xx.xx">
-								<button type="button" id="buttonRank" onclick="rankSearch()">Submit</button><br>
-								<span id="node_rank"></span>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-		</article>
-
-		<!------------------------------------------------
-		FluxInfo webpage information
-		------------------------------------------------->
-
-		<article id="about" class="wrapper style4">
-			<div class="container medium">
-				<h2>About FluxInfo</h2>
-				<p>FluxInfo runs on Flux since 11th of May 2022!</p>
-				<div class="col-4 col-6-medium col-12-small">
-					<section class="box style1">
-							<p style="text-align:justify">Cloned version of the original Fluxinfo dApp. I left most of the code unchanged including donation address to the real author. If this dApp helped you, please consider donating to him. If you see any issues with this version, ping me on the flux discord @Mike854<br>
-							Latest Update: Sept 3 '23 - Fixed APR calc to include available PA's<br><br>I often saw the following questions <i>"after how many days will I obtain my reward?" or "how many reward for a Cumulus node?"</i> on the Flux official Discord channel.<br>
-							Since I was also asking myself these questions, and knowing that 
-this information changes depending on the number of Flux nodes, I 
-decided to start creating a simple web page.<br><br>
-							FluxInfo has evolved a lot since its creation in March 2022 by 
-adding new features like monthly profit simulator. 
-							I'm not a developer at all, I learn by doing and testing. But I'm
- very motivated by all the positive feedback and great support I receive
- from the Flux community.<br><br>
-							Since the 11th of May 2022, FluxInfo webpage runs on Flux thanks to <a href="https://runonflux.io/" target="_blank">runonflux.io</a>!<br>
-							If you want to know more about FluxInfo, please have a look to the <a href="https://github.com/VladCM81/fluxinfo#webpage-evolution" target="_blank">webpage evolution</a> on Github.<br><br>
-							And if you appreciate my work, please support me with few FLUX sent to the address below. Thanks!<br>
-							FLUX Address: <span style="color:#ddd">t1eLxWdsBEwbMW611HBuEQJHwR1nCet4ojr</span></p>
-					</section>
-				</div>
-			</div>
-		</article>
-
-		<!------------------------------------------------
-		Contact section
-		------------------------------------------------->
-
-		<article id="contact" class="wrapper style4">
-			<div class="container medium">
-				<div class="row">
-					<div class="col-12">
-						<h2>Find me on ...</h2>
-							<ul class="social">
-								<li><a href="https://twitter.com/VladCM81" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-								<li><a href="https://github.com/VladCM81/fluxinfo" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
-								<li><a href="https://discord.io/runonflux" class="icon brands fa-discord" target="_blank"><span class="label">Discord</span></a></li>
-							</ul>
-						</div>
-					</div>
-				<footer>
-					<ul id="copyright">
-						<li>Made by VladCM81.<br><br>
-						Design based on "Miniport" template available on <a href="https://html5up.net/" target="_blank">HTML5 UP.</a></li>
-						<!--
-						Miniport by HTML5 UP
-						html5up.net | @ajlkn
-						Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-						-->
-					</ul>
-				</footer>
-			</div>
-		</article>
-
-		<script src="index_files/jquery.min.js"></script>
-		<script src="index_files/jquery.scrolly.min.js"></script>
-		<script src="index_files/browser.min.js"></script>
-		<script src="index_files/breakpoints.min.js"></script>
-		<script src="index_files/util.js"></script>
-		<script src="index_files/main.js"></script>
-        <script src="index_files/script.js"></script>
-
-	
-
-</body></html>
+</html>
